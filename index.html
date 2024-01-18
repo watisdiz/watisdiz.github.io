@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fitness Website Landing Page</title>
+<title>Fitness and Healthy Lifestyle</title>
 <style>
   body, html {
     margin: 0;
@@ -11,19 +11,34 @@
     height: 100%;
     font-family: Arial, sans-serif;
   }
-  .navbar {
+  .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
   }
-  .navbar a {
+  .nav, .menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  .nav li, .menu li {
+    padding: 10px 15px;
+  }
+  .nav a, .menu a {
     text-decoration: none;
     color: #000;
     font-size: 18px;
-    padding: 10px 15px;
     text-transform: uppercase;
+  }
+  .title {
+    flex-grow: 1;
+    text-align: center;
+  }
+  .title h1 {
+    font-size: 24px;
+    margin: 0;
   }
   .hero-image {
     background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/Homepage.jpg');
@@ -34,21 +49,6 @@
     position: relative;
     text-align: center;
     color: white;
-  }
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-  }
-  .hero-text h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-  }
-  .hero-text p {
-    font-size: 20px;
   }
   .footer {
     display: flex;
@@ -62,34 +62,78 @@
     color: #fff;
     font-size: 24px;
   }
-  @media (max-width: 600px) {
-    .navbar a { font-size: 14px; }
-    .hero-text h1 { font-size: 32px; }
-    .hero-text p { font-size: 16px; }
-    .footer a { font-size: 20px; }
+  /* Responsive design for mobile */
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+    .menu {
+      flex-direction: column;
+      position: absolute;
+      background-color: #fff;
+      width: 100%;
+      display: none;
+    }
+    .menu li {
+      text-align: center;
+    }
+    .menu a {
+      display: block;
+      width: 100%;
+      padding: 10px 0;
+    }
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+    .hamburger .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: #000;
+    }
   }
 </style>
 </head>
 <body>
 
-<header class="navbar">
-  <a href="#home">Home</a>
-  <a href="#exercises">Exercises</a>
-  <a href="#nutrition">Nutrition</a>
-  <a href="#contact">Get in Touch</a>
+<header class="header">
+  <nav class="nav">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#exercises">Exercises</a></li>
+    <li><a href="#nutrition">Nutrition</a></li>
+    <li><a href="#contact">Get in Touch</a></li>
+  </nav>
+  <div class="title"><h1>Fitness and healthy lifestyle</h1></div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <nav class="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#exercises">Exercises</a></li>
+    <li><a href="#nutrition">Nutrition</a></li>
+    <li><a href="#contact">Get in Touch</a></li>
+  </nav>
 </header>
 
 <div class="hero-image">
-  <div class="hero-text">
-    <h1>Where fitness is life</h1>
-    <p>A Healthier You Starts Today</p>
-  </div>
+  <!-- Content here -->
 </div>
 
 <footer class="footer">
   <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
   <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
 </footer>
+
+<script>
+function toggleMenu() {
+  var menu = document.querySelector('.menu');
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
+</script>
 
 </body>
 </html>
