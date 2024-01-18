@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,22 +24,27 @@
     list-style: none;
     padding: 0;
   }
-  .nav li, .menu li {
+  .nav {
+    position: absolute;
+    left: 10px;
+  }
+  .nav li {
     padding: 10px 15px;
   }
-  .nav a, .menu a {
+  .nav a {
     text-decoration: none;
     color: #000;
     font-size: 18px;
     text-transform: uppercase;
   }
   .title {
-    flex-grow: 1;
+    flex: 1;
     text-align: center;
   }
   .title h1 {
     font-size: 24px;
     margin: 0;
+    display: inline-block;
   }
   .hero-image {
     background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/Homepage.jpg');
@@ -65,33 +71,33 @@
   /* Responsive design for mobile */
   @media (max-width: 768px) {
     .nav {
-      display: none;
-    }
-    .menu {
+      position: static;
       flex-direction: column;
-      position: absolute;
-      background-color: #fff;
       width: 100%;
       display: none;
     }
-    .menu li {
+    .nav li {
       text-align: center;
-    }
-    .menu a {
-      display: block;
-      width: 100%;
       padding: 10px 0;
     }
-    .hamburger {
+    .nav a {
       display: block;
+    }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
       cursor: pointer;
+      margin-left: auto;
     }
     .hamburger .bar {
-      display: block;
       width: 25px;
       height: 3px;
-      margin: 5px auto;
       background-color: #000;
+      margin: 3px 0;
+    }
+    .title, .title h1 {
+      display: block;
+      width: 100%;
     }
   }
 </style>
@@ -99,24 +105,18 @@
 <body>
 
 <header class="header">
-  <nav class="nav">
+  <div class="nav">
     <li><a href="#home">Home</a></li>
     <li><a href="#exercises">Exercises</a></li>
     <li><a href="#nutrition">Nutrition</a></li>
     <li><a href="#contact">Get in Touch</a></li>
-  </nav>
+  </div>
   <div class="title"><h1>Fitness and healthy lifestyle</h1></div>
   <div class="hamburger" onclick="toggleMenu()">
     <div class="bar"></div>
     <div class="bar"></div>
     <div class="bar"></div>
   </div>
-  <nav class="menu">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#exercises">Exercises</a></li>
-    <li><a href="#nutrition">Nutrition</a></li>
-    <li><a href="#contact">Get in Touch</a></li>
-  </nav>
 </header>
 
 <div class="hero-image">
@@ -130,8 +130,8 @@
 
 <script>
 function toggleMenu() {
-  var menu = document.querySelector('.menu');
-  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  var nav = document.querySelector('.nav');
+  nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
 }
 </script>
 
