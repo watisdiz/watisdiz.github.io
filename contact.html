@@ -75,31 +75,37 @@
     background-color: #222; /* Dark background for the form */
     padding: 40px;
     border-radius: 8px;
+    max-width: 600px; /* or whatever maximum width you prefer */
+    margin-left: auto;
+    margin-right: auto;
   }
   .contact-form h2 {
     text-align: center;
     margin-bottom: 1rem;
   }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: white;
-    color: #333;
-  }
-  .contact-form button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #28a745; /* Green background for the submit button */
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
+  .contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form button {
+  width: 100%; /* Make button full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+}
+
+.contact-form button {
+  background-color: #ca7900; /* Your chosen color for the button */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  /* If you want the button to be the same height as the input fields, specify the height */
+  height: 52px; /* Adjust height as necessary to match your input fields */
+}
     @media (max-width: 768px) {
       .nav {
         position: static;
