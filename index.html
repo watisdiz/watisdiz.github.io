@@ -1,10 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Watisdis sivut</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Website Landing Page</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+  }
+  .hero-image {
+    background-image: url('path-to-your-big-picture.jpg');
+    height: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  .hero-text p {
+    font-size: 20px;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #000;
+  }
+  .footer a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+  }
+  @media (max-width: 600px) {
+    .navbar a { font-size: 14px; }
+    .hero-text h1 { font-size: 32px; }
+    .hero-text p { font-size: 16px; }
+    .footer a { font-size: 20px; }
+  }
+</style>
 </head>
 <body>
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+
+<header class="navbar">
+  <a href="#home">Home</a>
+  <a href="#exercises">Exercises</a>
+  <a href="#nutrition">Nutrition</a>
+  <a href="#contact">Get in Touch</a>
+</header>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Where fitness is life</h1>
+    <p>A Healthier You Starts Today</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+  <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+</footer>
+
 </body>
 </html>
