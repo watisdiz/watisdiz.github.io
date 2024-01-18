@@ -1,3 +1,6 @@
+Certainly, here's the complete `index.html` with the added hero text centered on the image:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +37,7 @@
     text-decoration: none;
     color: #000;
     font-size: 18px;
-    text-transform: uppercase;
+    text-transform: none;
   }
   .title {
     flex: 1;
@@ -54,6 +57,23 @@
     position: relative;
     text-align: center;
     color: white;
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .hero-text p {
+    font-size: 20px;
+    margin-top: 0;
   }
   .footer {
     display: flex;
@@ -81,7 +101,6 @@
   .footer a.instagram {
     background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/instagram.jpg');
   }
-  /* Responsive design for mobile */
   @media (max-width: 768px) {
     .nav {
       position: static;
@@ -133,7 +152,10 @@
 </header>
 
 <div class="hero-image">
-  <!-- Content here -->
+  <div class="hero-text">
+    <h1>Where fitness is life</h1>
+    <p>A Healthier You Starts Today</p>
+  </div>
 </div>
 
 <footer class="footer">
