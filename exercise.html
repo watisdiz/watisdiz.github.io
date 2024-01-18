@@ -4,66 +4,142 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Exercises - Fitness and Healthy Lifestyle</title>
+<!-- The CSS here is assumed to be the same as in the index.html, so make sure to copy it over exactly -->
 <style>
-  /* ... existing styles from your index.html ... */
-  
-  .exercise-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  .exercise-item {
-    width: 30%; /* You can adjust this percentage based on your design */
-    margin-bottom: 20px;
-  }
-  .exercise-item img {
-    width: 100%; /* Make image responsive */
-    height: auto;
-    margin-bottom: 10px;
-  }
-  @media (max-width: 768px) {
-    .exercise-item {
-      width: 100%; /* Full width on mobile */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
     }
-  }
-</style>
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 10px 20px;
+    }
+    .nav, .menu {
+      display: flex;
+      list-style: none;
+      padding: 0;
+    }
+    .nav {
+      position: absolute;
+      left: 10px;
+    }
+    .nav li {
+      padding: 10px 15px;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      text-transform: none;
+    }
+    .title {
+      flex: 1;
+      text-align: center;
+    }
+    .title h1 {
+      font-size: 24px;
+      margin: 0;
+      display: inline-block;
+    }
+    .footer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+    }
+    .footer .connect {
+      font-size: 18px;
+      color: #000;
+      margin-right: 16px;
+    }
+    .footer a {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-right: 10px;
+    }
+    .footer a.twitter {
+      background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/X.png');
+    }
+    .footer a.instagram {
+      background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/instagram.jpg');
+    }
+    @media (max-width: 768px) {
+      .nav {
+        position: static;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+      }
+      .nav li {
+        text-align: center;
+        padding: 10px 0;
+      }
+      .nav a {
+        display: block;
+      }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: auto;
+      }
+      .hamburger .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        margin: 3px 0;
+      }
+      .title, .title h1 {
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header class="header">
-  <nav class="nav">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="exercise.html" class="active">Exercises</a></li>
-    <li><a href="nutrition.html">Nutrition</a></li>
-    <li><a href="contact.html">Get in Touch</a></li>
-  </nav>
-  <!-- Your title or logo here if needed -->
-  <div class="hamburger" onclick="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-</header>
+    <header class="header">
+        <div class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="exercise.html">Exercises</a></li>
+          <li><a href="#nutrition">Nutrition</a></li>
+          <li><a href="#contact">Get in Touch</a></li>
+        </div>
+        <div class="title"><h1>Fitness and healthy lifestyle</h1></div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </header>
 
 <main>
-  <section class="exercise-container">
-    <div class="exercise-item">
-      <img src="https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/image-asset.jpeg" alt="Basic Strength Training">
-      <h2>Basic Strength Training</h2>
-      <p>Work off that Sunday brunch!</p>
-    </div>
-    <div class="exercise-item">
-      <img src="https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/image-asset%20(2).jpeg" alt="Pull Your Weight">
-      <h2>Pull Your Weight</h2>
-      <p>By combining battle ropes, pulleys, and rope climbing, this beginner-level class will help you grow muscle, build endurance, and put your metabolism to work.</p>
-    </div>
-    <div class="exercise-item">
-      <img src="https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/image-asset%20(1).jpeg" alt="Obstacle Course">
-      <h2>Obstacle Course</h2>
-      <p>Combine free weights with squats, lunges, and high-interval exercises so that you can build strength according to your body type and goals.</p>
-    </div>
-  </section>
+  <!-- Your exercise content will go here -->
+  <div class="exercise-section">
+    <!-- First exercise -->
+    <img src="your-first-image.jpg" alt="Basic Strength Training">
+    <h2>Basic Strength Training</h2>
+    <p>Work off that Sunday brunch!</p>
+
+    <!-- Second exercise -->
+    <img src="your-second-image.jpg" alt="Pull Your Weight">
+    <h2>Pull Your Weight</h2>
+    <p>By combining battle ropes, pulleys, and rope climbing, this beginner-level class will help you grow muscle, build endurance, and put your metabolism to work.</p>
+
+    <!-- Third exercise -->
+    <img src="your-third-image.jpg" alt="Obstacle Course">
+    <h2>Obstacle Course</h2>
+    <p>Combine free weights with squats, lunges, and high-interval exercises so that you can build strength according to your body type and goals.</p>
+  </div>
 </main>
 
 <footer class="footer">
@@ -72,12 +148,12 @@
     <a href="https://instagram.com/" class="instagram" target="_blank" rel="noopener noreferrer"></a>
   </footer>
 
-<script>
-  function toggleMenu() {
-    var nav = document.querySelector('.nav');
-    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-  }
-</script>
+  <script>
+    function toggleMenu() {
+      var nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    }
+    </script>
 
 </body>
 </html>
