@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercises - Fitness and Healthy Lifestyle</title>
+<style>
+  /* ... existing styles from your index.html ... */
+  
+  .exercise-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .exercise-item {
+    width: 30%; /* You can adjust this percentage based on your design */
+    margin-bottom: 20px;
+  }
+  .exercise-item img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 768px) {
+    .exercise-item {
+      width: 100%; /* Full width on mobile */
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="exercise.html" class="active">Exercises</a></li>
+    <li><a href="nutrition.html">Nutrition</a></li>
+    <li><a href="contact.html">Get in Touch</a></li>
+  </nav>
+  <!-- Your title or logo here if needed -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</header>
+
+<main>
+  <section class="exercise-container">
+    <div class="exercise-item">
+      <img src="https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/image-asset.jpeg" alt="Basic Strength Training">
+      <h2>Basic Strength Training</h2>
+      <p>Work off that Sunday brunch!</p>
+    </div>
+    <div class="exercise-item">
+      <img src="https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/image-asset%20(2).jpeg" alt="Pull Your Weight">
+      <h2>Pull Your Weight</h2>
+      <p>By combining battle ropes, pulleys, and rope climbing, this beginner-level class will help you grow muscle, build endurance, and put your metabolism to work.</p>
+    </div>
+    <div class="exercise-item">
+      <img src="https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/image-asset%20(1).jpeg" alt="Obstacle Course">
+      <h2>Obstacle Course</h2>
+      <p>Combine free weights with squats, lunges, and high-interval exercises so that you can build strength according to your body type and goals.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <!-- Same footer as index.html -->
+</footer>
+
+<script>
+  function toggleMenu() {
+    var nav = document.querySelector('.nav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
