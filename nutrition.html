@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Fitness and Healthy Lifestyle</title>
+<title>Nutrition - Fitness and Healthy Lifestyle</title>
+<!-- The CSS here is assumed to be the same as in the index.html, so make sure to copy it over exactly -->
 <style>
     body, html {
       margin: 0;
@@ -71,35 +72,30 @@
     .footer a.instagram {
       background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/instagram.jpg');
     }
-    .contact-form {
-    background-color: #222; /* Dark background for the form */
-    padding: 40px;
-    border-radius: 8px;
-  }
-  .contact-form h2 {
+    .nutritions-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap as needed */
+    padding: 20px;
+    }
+    .nutrition-item {
+    flex: 1;
+    max-width: calc(33.333% - 20px); /* Adjust the width as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .nutrition-item img {
+    max-width: 100%;
+    height: auto;
+    }
+    .nutrition-item h2 {
+    margin: 10px 0 5px; /* Adjust the margin as needed */
+    }
+    .nutrition-item p {
     text-align: center;
-    margin-bottom: 1rem;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: white;
-    color: #333;
-  }
-  .contact-form button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #28a745; /* Green background for the submit button */
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
+    }
     @media (max-width: 768px) {
       .nav {
         position: static;
@@ -131,33 +127,49 @@
         width: 100%;
       }
     }
+    .nutritions-container {
+      flex-direction: column;
+    }
+    .nutrition-item {
+      max-width: 100%;
+    }
   </style>
 </head>
 <body>
 
-<header class="header">
-    <div class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="exercise.html">Exercises</a></li>
-        <li><a href="nutrition.html">Nutrition</a></li>
-        <li><a href="contact.html">Get in Touch</a></li>
-    </div>
-    <div class="title"><h1>Fitness and healthy lifestyle</h1></div>
-    <div class="hamburger" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-</header>
+    <header class="header">
+        <div class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="exercise.html">Exercises</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </div>
+        <div class="title"><h1>Fitness and healthy lifestyle</h1></div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </header>
 
-<main class="main-content">
-    <div class="contact-form">
-        <h2>Contact</h2>
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit">Submit</button>
-      </div>
+<main>
+    <div class="nutritions-container">
+    <div class="nutrition-item">
+      <img src="https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/image-asset%20(3).jpeg" alt="Basic Strength Training">
+      <h2>Basic Strength Training</h2>
+      <p>Work off that Sunday brunch!</p>
+    </div>
+    <div class="nutrition-item">
+      <img src="https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/image-asset%20(3).jpeg" alt="Pull Your Weight">
+      <h2>Pull Your Weight</h2>
+      <p>By combining battle ropes, pulleys, and rope climbing, this beginner-level class will help you grow muscle, build endurance, and put your metabolism to work.</p>
+    </div>
+    <div class="nutrition-item">
+      <img src="https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/image-asset%20(3).jpeg" alt="Obstacle Course">
+      <h2>Obstacle Course</h2>
+      <p>Combine free weights with squats, lunges, and high-interval exercises so that you can build strength according to your body type and goals.</p>
+    </div>
+  </div>
 </main>
 
 <footer class="footer">
@@ -165,13 +177,13 @@
     <a href="https://twitter.com/" class="twitter" target="_blank" rel="noopener noreferrer"></a>
     <a href="https://instagram.com/" class="instagram" target="_blank" rel="noopener noreferrer"></a>
   </footer>
-  
+
   <script>
-  function toggleMenu() {
-    var nav = document.querySelector('.nav');
-    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-  }
-  </script>
+    function toggleMenu() {
+      var nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    }
+    </script>
 
 </body>
 </html>
