@@ -3,150 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Fitness and Healthy Lifestyle</title>
+<title>Fitness and Healthy Lifestyle</title>
 <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #fff;
-      padding: 10px 20px;
-    }
-    .nav, .menu {
-      display: flex;
-      list-style: none;
-      padding: 0;
-    }
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+  }
+  .nav, .menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  .nav {
+    position: absolute;
+    left: 10px;
+  }
+  .nav li {
+    padding: 10px 15px;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    text-transform: none;
+  }
+  .title {
+    flex: 1;
+    text-align: center;
+  }
+  .title h1 {
+    font-size: 24px;
+    margin: 0;
+    display: inline-block;
+  }
+  .hero-image {
+    background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/Homepage.jpg');
+    height: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .hero-text p {
+    font-size: 20px;
+    margin-top: 0;
+  }
+  .footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+  }
+  .footer .connect {
+    font-size: 18px;
+    color: #000;
+    margin-right: 16px;
+  }
+  .footer a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+  }
+  .footer a.twitter {
+    background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/X.png');
+  }
+  .footer a.instagram {
+    background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/instagram.jpg');
+  }
+  @media (max-width: 768px) {
     .nav {
-      position: absolute;
-      left: 10px;
+      position: static;
+      flex-direction: column;
+      width: 100%;
+      display: none;
     }
     .nav li {
-      padding: 10px 15px;
+      text-align: center;
+      padding: 10px 0;
     }
     .nav a {
-      text-decoration: none;
-      color: #000;
-      font-size: 18px;
-      text-transform: none;
+      display: block;
     }
-    .title {
-      flex: 1;
-      text-align: center;
-    }
-    .title h1 {
-      font-size: 24px;
-      margin: 0;
-      display: inline-block;
-    }
-    .hero-image {
-      background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/Homepage.jpg');
-      height: 85%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      text-align: center;
-      color: white;
-    }
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      text-align: center;
-    }
-    .hero-text h1 {
-      font-size: 50px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .hero-text p {
-      font-size: 20px;
-      margin-top: 0;
-    }
-    .footer {
+    .hamburger {
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 20px;
-      background-color: #fff;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
     }
-    .footer .connect {
-      font-size: 18px;
-      color: #000;
-      margin-right: 16px;
+    .hamburger .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+      margin: 3px 0;
     }
-    .footer a {
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      background-repeat: no-repeat;
-      background-size: contain;
-      margin-right: 10px;
+    .title, .title h1 {
+      display: block;
+      width: 100%;
     }
-    .footer a.twitter {
-      background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/X.png');
-    }
-    .footer a.instagram {
-      background-image: url('https://raw.githubusercontent.com/watisdiz/watisdiz.github.io/main/instagram.jpg');
-    }
-    @media (max-width: 768px) {
-      .nav {
-        position: static;
-        flex-direction: column;
-        width: 100%;
-        display: none;
-      }
-      .nav li {
-        text-align: center;
-        padding: 10px 0;
-      }
-      .nav a {
-        display: block;
-      }
-      .hamburger {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        margin-left: auto;
-      }
-      .hamburger .bar {
-        width: 25px;
-        height: 3px;
-        background-color: #000;
-        margin: 3px 0;
-      }
-      .title, .title h1 {
-        display: block;
-        width: 100%;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
 <header class="header">
-    <div class="nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="exercise.html">Exercises</a></li>
-        <li><a href="#nutrition">Nutrition</a></li>
-        <li><a href="contact.html">Get in Touch</a></li>
-    </div>
-    <div class="title"><h1>Fitness and healthy lifestyle</h1></div>
-    <div class="hamburger" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
+  <div class="nav">
+    <li><a href="#home">Home</a></li>
+    <li><a href="exercise.html">Exercises</a></li>
+    <li><a href="#nutrition">Nutrition</a></li>
+    <li><a href="contact.html">Get in Touch</a></li>
+  </div>
+  <div class="title"><h1>Fitness and healthy lifestyle</h1></div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
 </header>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1>Where fitness is life</h1>
+    <p>A Healthier You Starts Today</p>
+  </div>
+</div>
 
 <main class="main-content">
   <div class="contact-container">
